@@ -1,8 +1,15 @@
 version: 0.2
 phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - cd frontend
+      - npm install
   build:
     commands:
-      - echo "Building the web application..."
+      - cd frontend
+      - npm run build
 artifacts:
   files:
-    - '**/*'
+    - frontend/dist/**/*
