@@ -9,4 +9,5 @@ phases:
       - npm run build
 artifacts:
   files:
-    - frontend/dist/**/*
+    - '**/*'
+  base-directory: frontend/dist
